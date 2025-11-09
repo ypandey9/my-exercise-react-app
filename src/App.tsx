@@ -1,3 +1,4 @@
+import Card from "./components/Card";
 import Greetings from "./components/Greetings";
 
 export default function App() {
@@ -5,6 +6,9 @@ export default function App() {
 <div>
   <Greetings user="Yogesh"/>
   <Greetings user="React Learner" />
+  <Card title="React Basics">
+    <p>Thsi is inside the card.</p>
+  </Card>
 </div>
   );
 }
