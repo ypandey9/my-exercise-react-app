@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Card from "./components/Card";
 
 const fruits=["Apple","Banana","Orange"];
 
 export default function App() {
+
+  const [name,setName]=useState("");
   return (
  <Card
  header={<h3 style={{color:"blue"}}>React Composition</h3>}
@@ -15,6 +18,10 @@ export default function App() {
     <li key={index}>{fruit}</li>
   ))}
  </ul>
+<div>
+  <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
+</div>
+<p>Hello, {name}</p>
  </Card>
   );
 }
